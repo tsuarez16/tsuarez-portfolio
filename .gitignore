@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment
+.env
+
+# Test output
+.pytest_cache/
+.coverage
+
+# Build
+/dist/
+/build/
+
+# Misc
+*.swp
+*.swo
