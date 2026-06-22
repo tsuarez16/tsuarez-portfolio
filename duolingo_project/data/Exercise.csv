@@ -1,0 +1,11 @@
+exercise_id,difficulty_level,question_type,question,accuracy_score,attempt_id,lesson_id
+1001,Beginner,multiple_choice,What is 'hello' in Spanish?,0.87,1111,1001
+1002,Beginner,fill_blank,Complete: 'Buenos ____' (Good morning),0.92,1112,1001
+1003,Intermediate,translation,Translate: 'I am a student',0.78,1113,1002
+1004,Beginner,multiple_choice,What is 'water' in Spanish?,0.85,1114,1002
+1005,Beginner,pronunciation,Say 'Hola' correctly,0.91,1115,1001
+1006,Beginner,multiple_choice,Which is the correct present tense?,0.75,1116,1003
+1007,Beginner,translation,Translate complex sentence,0.82,1117,1003
+1008,Beginner,fill_blank,Complete the pronoun,0.94,1118,1006
+1009,Advanced,multiple_choice,Identify the correct tone,0.45,1119,1009
+1010,Intermediate,translation,Translate: 'I ate yesterday',0.79,1120,1008

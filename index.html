@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Name — Product Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles/pm-portfolio.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">Tate Suarez Portfolio</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Projects</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Me</a></li>
+  </ul>
+</nav>
+
+<script>
+(function(){
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+  toggle.addEventListener('click', function(){
+    const isOpen = links.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Product Manager Portfolio</p>
+    <h1 class="hero-title">Hello, I'm<br><em>Tate Suarez</em></h1>
+    <p class="hero-sub">Product-minded student at Carnegie Mellon University studying Information Systems, HCI, and Business. I am currently exploring data, product, and emerging tech to create better digital experiences.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn-primary">See My Work</a>
+      <a href="#about" class="btn-secondary">About Me</a>
+    </div>
+    <p class="hero-note">psst... website was coded by me (HTML &amp; CSS) ✿</p>
+  </div>
+
+  <div class="hero-image-wrap">
+    <div class="hero-image-frame">
+      <!-- Profile photo (attempt multiple extensions; placeholder shown until load) -->
+      <img id="profile-photo" data-base="img_pdf/newpfp" alt="Tate Suarez" style="display:none;" />
+      <div class="hero-image-placeholder">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="30" r="18" fill="#8A8378"/>
+          <ellipse cx="40" cy="70" rx="28" ry="20" fill="#8A8378"/>
+        </svg>
+        <span>Your Photo Here</span>
+      </div>
+      <svg class="circ-text" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <path id="circlePath" d="M100,100 m -98,0 a98,98 0 1,1 196,0 a98,98 0 1,1 -196,0" />
+        </defs>
+        <text>
+          <textPath href="#circlePath" startOffset="0">
+            product portfolio • product portfolio • product portfolio • product portfolio • product portfolio •
+          </textPath>
+        </text>
+      </svg>
+    
+    <div class="rect-badges" aria-hidden="true">
+      <div class="rect-badge">
+        <img src="img_pdf/is.png" alt="CMU Institute" />
+      </div>
+        <div class="rect-badge">
+          <img src="img_pdf/hci.png" alt="HCI" />
+        </div>
+      </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <details class="about-details">
+      <summary class="section-label">ABOUT ME</summary>
+      <div class="divider"></div>
+      <div class="about-grid">
+        <div class="about-body">
+          <p>I'm a Carnegie Mellon junior who has worked across product, engineering, and research. I enjoy getting close to users, and helping my teams ship work that is not just useful, but USABLE. My background includes product discovery for an early-stage AI startup, feature work in TypeScript and React, and research analysis in various biomedical labs. My belief is simple: the execution of a product cannot be done, without the right balance of empathy.</p>
+        </div>
+
+        <!-- stat cards removed as requested -->
+
+        <!-- Extras moved into About details -->
+        <div class="extras-merged" style="margin-top:2.5rem;">
+          <h2 class="extras-heading">Other <em style="font-family: var(--serif); font-style: italic; color: var(--accent);">Facts About Me</em></h2>
+
+          <div class="extras-grid">
+            <div class="extra-card">
+              <div class="extra-icon">🎸</div>
+              <h3 class="extra-title">Campus Programming</h3>
+              <p class="extra-desc">As the Concerts Lead for CMU's Activities Board, I help manage large-scale concert programming and budgets, acting as a training ground for stakeholder coordination. Not only that but I love music, so this experience has been both professionally and personally rewarding.</p>
+            </div>
+            <div class="extra-card">
+              <div class="extra-icon">🐾</div>
+              <h3 class="extra-title">I'm a HUSTLER</h3>
+              <p class="extra-desc">I've been working part-time jobs since the day I turned 15 (I got hired 2 weeks before my 15th birthday, haha). Since then I've worked in retail, food services, medical labs, babysitting, software engineering- you name it. Despite how small the role may seem, it taught me to be a relentless go-getter who thrives under pressure and never gives up on a goal.</p>
+            </div>
+            <div class="extra-card">
+              <div class="extra-icon">🏆</div>
+              <h3 class="extra-title">I'm a Builder</h3>
+              <p class="extra-desc">As one of the build chairs, I co-led the construction of the Delta Gamma Spring Carnival booth, a 1.5‑story, 7-room, structure (size of a house), from the ground up. I framed the structure, coordinated trades, and managed materials procurement. The project sharpened my hands-on problem-solving while I helped coordinate 70+ members under tight deadlines.</p>
+            </div>
+            <div class="extra-card">
+              <div class="extra-icon">🎓</div>
+              <h3 class="extra-title">Full-Ride Scholar</h3>
+              <p class="extra-desc">I'm a full-ride scholar at CMU, from a mix of financial aid and $120,000 worth of merit-based scholarship support. Coming from a low-income family background, thisexperience has taught me the value of hard work and perseverance. </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+  </div>
+</section>
+
+<script>
+// Try multiple extensions to load the profile image and show it when found.
+(function(){
+  const imgEl = document.getElementById('profile-photo');
+  if(!imgEl) return;
+  const base = imgEl.dataset.base || 'profile_pic';
+  const exts = ['.png','.jpg','.jpeg','.webp','.heic','-1.png'];
+  let found = false;
+  function tryNext(i){
+    if(i>=exts.length) return;
+    const testSrc = base + exts[i];
+    const test = new Image();
+    test.onload = function(){
+      imgEl.src = testSrc;
+      imgEl.style.display = 'block';
+      const placeholder = imgEl.nextElementSibling;
+      if(placeholder && placeholder.classList && placeholder.classList.contains('hero-image-placeholder')){
+        placeholder.style.display = 'none';
+      }
+      found = true;
+    };
+    test.onerror = function(){ tryNext(i+1); };
+    test.src = testSrc;
+  }
+  tryNext(0);
+})();
+</script>
+
+<script>
+// Carousel button behavior
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.carousel-wrap').forEach(function(wrap){
+    var container = wrap.querySelector('.work-grid.carousel');
+    var next = wrap.querySelector('.carousel-btn.next');
+    var prev = wrap.querySelector('.carousel-btn.prev');
+    if(!container) return;
+    function pageWidth(){ return Math.round(container.clientWidth * 0.85); }
+    next && next.addEventListener('click', function(){ container.scrollBy({ left: pageWidth(), behavior: 'smooth' }); });
+    prev && prev.addEventListener('click', function(){ container.scrollBy({ left: -pageWidth(), behavior: 'smooth' }); });
+  });
+});
+</script>
+
+<!-- WORK -->
+<section id="work">
+  <div class="section-inner">
+    <p class="section-label">Where all my blood, sweat &amp; tears go</p>
+    <h2 class="section-heading">My <em>Product Projects</em></h2>
+    <div class="divider"></div>
+
+    <div class="carousel-wrap">
+      <button class="carousel-btn prev" aria-label="Previous">‹</button>
+      <div class="work-grid carousel" tabindex="0">
+
+      <div class="project-card">
+        <div class="project-thumb c1">
+          <img src="img_pdf/depop.png" alt="Depop Pop-Up Platform" />
+          <span class="project-tag">Product Strategy & UX</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Depop Pop-Up Platform</h3>
+          <p class="project-desc"> (Independent Project) Scoped a 3-feature solution and a 4-phase go-to-market roadmap to connect online resale with physical pop-up events; defined KPIs for adoption, vendor onboarding, and event revenue.</p>
+          <a href="img_pdf/Industry Presentation Project - Depop.pdf" class="project-link">View Presentation</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb c2">
+          <img src="img_pdf/rleyhpic.avif" alt="R'leyh Software" />
+          <span class="project-tag">Product Strategy & Software Dev</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">R'leyh Software</h3>
+          <p class="project-desc">(Contract Work) Worked at R'leyh Software, a boutique consultancy that architects platforms and ships product solutions. I translated Figma into React/TypeScript features, prioritized roadmap and bug work, and supported platform infrastructure to help launch and grow client products.</p>
+          <a href="https://rleyh.com" class="project-link">View Company Website</a>
+        </div>
+      </div>
+      
+      <a href="#work" class="project-card">
+        <div class="project-thumb c1">
+          <img src="img_pdf/sneakyswing.jpeg" alt="SneakySwing thumbnail" />
+          <span class="project-tag">Product Management Focused</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">SneakySwing - Perflection AI</h3>
+          <p class="project-desc">(Contract Work) Researched onboarding friction, synthesized interview findings, and helped redirect the roadmap toward a clearer setup flow before new feature work.</p>
+          <span class="project-link">Cannot be viewed due to confidentiality</span>
+        </div>
+      </a>
+
+      </div>
+      <button class="carousel-btn next" aria-label="Next">›</button>
+    </div>
+
+    <!-- Case Study Template removed -->
+  </div>
+</section>
+
+<!-- MORE PROJECTS -->
+<section id="more-projects">
+  <div class="section-inner">
+    <h2 class="section-heading">My <em>Technical Projects</em></h2>
+    <div class="divider"></div>
+
+    <div class="carousel-wrap">
+      <button class="carousel-btn prev" aria-label="Previous">‹</button>
+      <div class="work-grid carousel" tabindex="0">
+
+      <a href="#hire" class="project-card">
+        <div class="project-thumb c3">
+          <img src="img_pdf/duologo.png" alt="Duolingo mascot" />
+          <span class="project-tag">Product Strategy & Software Dev </span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Duolingo Database Study</h3>
+          <p class="project-desc"> Reverse-engineered an ed-tech database, built SQL queries, and used the schema work to think more clearly about product structure and user journeys.</p>
+          <span class="project-link">Cannot be viewed due to confidentiality</span>
+        </div>
+      </a>
+      
+      <div class="project-card">
+        <div class="project-thumb c1">
+          <img src="img_pdf/Screenshot 2026-06-10 at 5.19.10 PM.png" alt="Technical project screenshot" />
+          <span class="project-tag">Game Design & Software Dev</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Candy Cam Catcher</h3>
+          <p class="project-desc"> Submission for Carnegie Mellon's 15-112 Fundamentals of Programming Final Project, where my team and I built an iteration of the classic mobile game, Cut The Rope, using Open CV and vertical rope integraiton physics, with Python. Users must cut the ropes to create a path to the candy. Project earned us the highest grade, a 100%. </p>
+          <a href="https://www.youtube.com/watch?v=F8HrSRlx43c" class="project-link"> View Submission Video </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb c2">
+          <img src="img_pdf/medpic.jpg" alt="BRIGHT-UP Research Presentation" />
+          <span class="project-tag">Biomedical Research</span>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Retinal Ganglion Cell Analysis</h3>
+          <p class="project-desc">At the University of Washington School of Medicine, I researched retinal ganglion cell diversity using multi-electrode arrays to record neural activity. Analyzed S-cone input patterns across different cell types, discovering multiple temporal profiles among non-SBC cells. Presented findings on how rare ganglion cell types contribute to visual signal processing in the primate retina.</p>
+          <a href="img_pdf/Tate_Suarez_GanglionCellResearch.pdf" class="project-link">View Presentation</a>
+        </div>
+      </div>
+
+        <div class="project-card">
+          <div class="project-thumb c3">
+            <img src="img_pdf/medpic.jpg" alt="Intracellular Calcium Research" />
+            <span class="project-tag">Biomedical Research</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Intracellular Calcium & Wnt Signaling</h3>
+            <p class="project-desc">Investigated how Wnt5a and Ror2 receptor dimerization regulate intracellular calcium entry in neurons using fluorescent calcium imaging. Conducted experiments on hippocampal neuron cultures in the Barria Lab to understand the role of the Wnt signaling pathway in neuronal communication. This research addresses potential therapeutic approaches to neurodegenerative diseases.</p>
+            <a href="img_pdf/Tate_Suarez_IntracellularCalciumResearch.pdf" class="project-link">View Presentation</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn next" aria-label="Next">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- Extras moved into About details (removed standalone section) -->
+
+<!-- HIRE CTA -->
+<section id="hire">
+  <div class="section-inner">
+    <p class="hire-label">Well, you made it to the bottom of the page</p>
+    <h2 class="hire-heading">& now you want to click <em>contact me</em></h2>
+    <a href="contact.html" class="btn-primary" style="font-size: 1.0625rem; padding: 1rem 2.5rem;">Contact Me →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Tate Suarez &middot; Product Manager Portfolio &middot; <a href="mailto:tsuarez@cmu.edu">tsuarez@cmu.edu</a></p>
+</footer>
+
+</body>
+</html>

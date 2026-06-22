@@ -1,0 +1,11 @@
+lesson_id,course_id,title,difficulty_level,accuracy_score
+1001,9038,Greetings and Basics,Beginner,0.92
+1002,9038,Food and Drinks,Beginner,0.87
+1003,9038,Present Tense Verbs,Intermediate,0.78
+1004,9045,Pinyin Introduction,Beginner,0.65
+1005,9045,Common Phrases,Beginner,0.71
+1006,9069,Basic Pronouns,Beginner,0.94
+1007,6962,Arabic Alphabet,Beginner,0.68
+1008,4577,Spanish Pronunciation,Beginner,0.83
+1009,6945,Subjunctive Mood,Advanced,0.61
+1010,6945,Past Tenses,Intermediate,0.75
